@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { PetComponent } from './pet.component'
+import { PetComponent } from './pet/pet.component'
 
 @NgModule({
   declarations: [
