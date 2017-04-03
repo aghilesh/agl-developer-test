@@ -21,15 +21,19 @@ PetComponent template render the Cat names under each gender.
     
     1. Checkout the repository
     2. npm install
-		3. npm start
-		Above will run the applicaiton in the URL `http://localhost:4200/` 
-		and the unit test results in http://localhost:9876
+	3. npm start
+	
+	Above will run the applicaiton in the URL `http://localhost:4200/` 
+	and the unit test results in http://localhost:9876
 		
-		Open chrome browser by running `chrome.exe --disable-web-security --user-data-dir` in run prompt to avoid Cross Domain Issue.
+	Open chrome browser by running `chrome.exe --disable-web-security --user-data-dir` in run prompt to avoid Cross Domain Issue.
 	
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. This comment is not required if the above npm start is already running. This will load the application without unit testing.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
+The app will automatically reload if you change any of the source files. 
+This command is not required if the above npm start is already running. 
+This will load the application without unit testing.
 
 ## Build
 
@@ -38,5 +42,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-    There are 12 tests written to test the AppComponent and PetComponent.
-    To test the data related items, follow the instructions in the PetService and PetComponent file which will load test data to the application. Comment the API calls. 
+
+There are 12 tests written to test the AppComponent and PetComponent.
+To test the data related items, follow the instructions in the PetService and PetComponent file which will load test data to the application. Comment the API calls. 
