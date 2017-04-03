@@ -1,0 +1,10 @@
+<h2>{{title}}</h2>
+<ul>
+    <div *ngFor="let gender of ownerGender">
+        <span>{{petTypeToShow}} of {{gender}} owners</span>
+        <ul>
+            <li *ngFor="let pet of pets[gender]">{{pet.name}}</li>
+            <li *ngIf="!pets[gender].length">No {{petTypeToShow}} available under {{gender}} gender</li>
+        </ul>
+    </div>
+</ul>
