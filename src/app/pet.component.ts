@@ -35,7 +35,7 @@ export class PetComponent implements OnInit{
         // this.pets = this.groupByGender(this.petService.getPets());
         // this.ownerGender = Object.keys(this.pets);
         /**
-         * <START OF UNIT TEST DATA CALL>
+         * <END OF UNIT TEST DATA CALL>
          */
 
         /**
