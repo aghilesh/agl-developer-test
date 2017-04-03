@@ -1,6 +1,6 @@
 # AglDevTest
 
-This project consumes API serive hosted at 
+This Angular2 project consumes API serive hosted at 
 http://agl-developer-test.azurewebsites.net/people.json
 
 API service contains Pet and it's owners mapping.
