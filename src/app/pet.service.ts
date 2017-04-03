@@ -12,8 +12,8 @@ export class PetService {
     private petsAPIUrl = `http://agl-developer-test.azurewebsites.net/people.json`;
     constructor(private http: Http){}
     getPets(){
-        //return this.http.get(this.petsAPIUrl).map(this.extractData);
-        return PETS;
+        return this.http.get(this.petsAPIUrl).map(this.extractData);
+        //return PETS;
     }
 
     private extractData(res: Response){

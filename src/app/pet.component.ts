@@ -29,12 +29,12 @@ export class PetComponent implements OnInit{
      * Sets this.pets and this.owneGender to template 
      */
     getPets(){
-        this.pets = this.groupByGender(this.petService.getPets());
-        this.ownerGender = Object.keys(this.pets);
-        // this.petService.getPets().subscribe(pets => {
-        //     this.pets = this.groupByGender(pets);
-        //     this.ownerGender = Object.keys(this.pets);
-        // });
+        //this.pets = this.groupByGender(this.petService.getPets());
+        //this.ownerGender = Object.keys(this.pets);
+        this.petService.getPets().subscribe(pets => {
+            this.pets = this.groupByGender(pets);
+            this.ownerGender = Object.keys(this.pets);
+        });
     }
     /**
      * Group pets data from service by Owner Gender 
