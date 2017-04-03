@@ -6,11 +6,11 @@ http://agl-developer-test.azurewebsites.net/people.json
 API service contains Pet and it's owners mapping.
 Angular 2 component 'PetComponent'calls the API using 'PetService' which internally using Angular 'HttpModule'. PetComponent methods gropus 'Cats' data under owners gender like below 
 
-Male 
-    Cat 1
+#Male ->
+    Cat 1,
     Cat 2
-Female 
-    Cat 3 
+#Female ->
+    Cat 3, 
     Cat 4
 
 PetComponent template render the Cat names under each gender.
