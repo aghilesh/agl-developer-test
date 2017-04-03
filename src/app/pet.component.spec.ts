@@ -12,7 +12,7 @@ describe('PetComponent', () => {
       imports: [
         HttpModule
       ],
-      providers: [ PetService],
+      providers: [PetService],
     }).compileComponents();
   }));
 
@@ -33,5 +33,58 @@ describe('PetComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h2').textContent).toContain('Pets data Directory');
+  }));
+
+  it('should render Gender Male & Female as SPAN', async(() => {
+    const fixture = TestBed.createComponent(PetComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    let spanElements = compiled.querySelectorAll('span');
+    expect(spanElements[0].textContent).toContain('Cat of Male owners');
+    expect(spanElements[1].textContent).toContain('Cat of Female owners');
+  }));
+
+
+  it('should render 4 Cats for Male Owners', async(() => {
+    const fixture = TestBed.createComponent(PetComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelectorAll('.Male>li').length).toEqual(4);
+  }));
+
+  it('should render 3 Cats for Female Owners', async(() => {
+    const fixture = TestBed.createComponent(PetComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelectorAll('.Female>li').length).toEqual(3);
+  }));
+
+  it('should render Garfield, Tom, Max, Jim under Male', async(() => {
+    let catsUnderMale = ["Garfield", "Tom", "Max", "Jim"];
+    let notFound = false;
+    const fixture = TestBed.createComponent(PetComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    document.querySelectorAll('.Male>li').forEach(function (ele) {
+      if(-1 == catsUnderMale.indexOf(ele.textContent)){
+        notFound = true;
+      }
+    })
+    expect(notFound).toEqual(false);
+  }));
+
+
+  it('should render Garfield, Tabby, Simba under Female', async(() => {
+    let catsUnderMale = ["Garfield", "Tabby", "Simba"];
+    let notFound = false;
+    const fixture = TestBed.createComponent(PetComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    document.querySelectorAll('.Female>li').forEach(function (ele) {
+      if(-1 == catsUnderMale.indexOf(ele.textContent)){
+        notFound = true;
+      }
+    })
+    expect(notFound).toEqual(false);
   }));
 });

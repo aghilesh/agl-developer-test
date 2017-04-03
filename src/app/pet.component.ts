@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { PetService } from './pet.service';
-//import { In }
+
 @Component({
     selector: 'pet-list',
     templateUrl: './pet.component.html',
@@ -29,12 +29,25 @@ export class PetComponent implements OnInit{
      * Sets this.pets and this.owneGender to template 
      */
     getPets(){
-        //this.pets = this.groupByGender(this.petService.getPets());
-        //this.ownerGender = Object.keys(this.pets);
+        /**
+         * <START OF UNIT TEST DATA CALL>
+         */
+        // this.pets = this.groupByGender(this.petService.getPets());
+        // this.ownerGender = Object.keys(this.pets);
+        /**
+         * <START OF UNIT TEST DATA CALL>
+         */
+
+        /**
+         * Start : API CALL 
+         */
         this.petService.getPets().subscribe(pets => {
             this.pets = this.groupByGender(pets);
             this.ownerGender = Object.keys(this.pets);
         });
+        /**
+         * End : API CALL 
+         */
     }
     /**
      * Group pets data from service by Owner Gender 

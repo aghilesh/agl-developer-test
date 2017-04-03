@@ -13,7 +13,7 @@ export class PetService {
     constructor(private http: Http){}
     getPets(){
         return this.http.get(this.petsAPIUrl).map(this.extractData);
-        //return PETS;
+        //return PETS; // Enable ths line for unit testing by commenting above line
     }
 
     private extractData(res: Response){
